@@ -1,0 +1,26 @@
+title: Generate merges log
+summary: |
+  Generates a changelog based on git commits.
+description: |
+  Generates a changelog based on git commits. The step collects the latest n-commits.
+website: https://github.com/JorenVos/bitrise-generate-merges-log
+source_code_url: https://github.com/JorenVos/bitrise-generate-merges-log
+support_url: https://github.com/JorenVos/bitrise-generate-merges-log/issues
+
+type_tags:
+  - utility
+
+toolkit:
+  bash:
+    entry_file: step.sh
+
+inputs:
+  - number_of_commits: 10
+    opts:
+      title: "Number of merge commits that should be in the merges log"
+
+outputs:
+  - BITRISE_MERGES_LOG:
+    opts:
+      title: Merges log content
+      summary: Merges log content
