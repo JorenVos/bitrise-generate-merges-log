@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ex
 
-print pwd
+pwd
 
 echo "This is the value specified for the input 'number_of_commits': ${number_of_commits}"
 
